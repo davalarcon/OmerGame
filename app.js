@@ -12,8 +12,11 @@ $(document).ready(function(){
   $('.gridImg').click(function(){
 
     if($(this).attr('src') ===  $(".currentCard").attr('src')){
-    alert('Great!');
+    // alert('Great!');
     myGame.nextRound();
+    }
+    else if ($(this).attr('src') === ('images/3.png')) {
+      alert('You Won!');
     }
     else {
       // alert('Game Over');
