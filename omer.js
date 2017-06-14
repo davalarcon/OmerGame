@@ -1,13 +1,9 @@
 console.log('ready');
 function OmerGame (){
-  this.grid = [
-                [0,0,0],
-                [0,0,0],
-                [0,0,0],
-              ];
-  this.hebrewNumbers = ['images/1.png','images/2.png','images/3.png','images/4.png','images/5.png','images/6.png','images/7.png','images/8.png','images/9.png','images/10.png' ];
+  this.grid = [0,0,0,0,0,0,0,0,0];
+  this.hebrewNumbers = ['images/1.png','images/2.png','images/3.png','images/4.png','images/5.png','images/6.png','images/7.png','images/8.png','images/9.png','images/10.png', 'images/11.png','images/12.png','images/13.png','images/14.png','images/15.png','images/16.png','images/17.png','images/18.png','images/19.png','images/20.png','images/21.png','images/22.png','images/23.png',
+  'images/24.png','images/25.png','images/26.png','images/27.png','images/28.png','images/29.png','images/30.png' ];
   this.randomCardsGrid = '';
-  this.round = 7;
   this.currentNumber = 1;
   this.currentCard = '';
   this.spotOn = '';
@@ -22,42 +18,60 @@ $(document).ready(function(){
 //_______________________
 
     OmerGame.prototype.startGame = function (){
-      this.addRandomCards = function(){
-          for ( var i = 0 ; i <= 3; i++){
-          this.addRandomCards();
-        }
-      };
       this.showCurrentCard();
-      this.round+=1;
-      this.currentNumber+=1;
+      this.addRandomCards();
+
       $('#counter').html(this.round);
-      };
+    };
+
 
     OmerGame.prototype.nextRound = function (){
-      this.addRandomCards();
-      this.currentNumber +=1;
       this.round +=1;
+      this.showCurrentCard();
+      this.addRandomCards();
       $('#counter').html(this.round);
     };
 
     OmerGame.prototype.addRandomCards = (function (){
-      var randomCards = Math.floor((Math.random()*hebrewNumbers.length)+0);
-      this.randomCardsGrid.push(this.hebrewNumbers[randomCards]);
+      function shuffle(input) {
+        for (var i = input.length-1; i >=0; i--) {
+
+          var randomIndex = Math.floor(Math.random()*(i+1));
+          var itemAtIndex = input[randomIndex];
+
+          input[randomIndex] = input[i];
+          input[i] = itemAtIndex;
+        }
+        return input;
+      }
+
+      //                             slice to copy the array
+      //                            (shuffle changes the original)
+      //                                        |
+    var shuffledNumbers = shuffle(this.hebrewNumbers.slice());
+    var gridNumbers = shuffledNumbers.slice(0,9);
+    var randomPosition = (Math.floor(Math.random()*9)+0);
+    gridNumbers[randomPosition]=this.currentCard;
+    for (var i=0 ; i<=9 ; i++){
+
+      $('#number'+i).attr('src', gridNumbers[i]);
+    }
+
+      // var randomCards = Math.floor((Math.random()*hebrewNumbers.length)+0);
+      // this.randomCardsGrid.push(this.hebrewNumbers[randomCards]);
 
     });
 
     OmerGame.prototype.showCurrentCard = (function(){
-    this.currentCard = (this.hebrewNumbers[this.round]);
+    this.currentCard = (this.hebrewNumbers[this.currentNumber-1]);
       var currentCardImgSrc = $(".currentCard").attr('src', this.currentCard);
-
-
     });
 
 
-$('#counter').html(this.round);
+
+
 
 });
-
 
 
 
