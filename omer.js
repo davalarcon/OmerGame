@@ -5,9 +5,9 @@ function OmerGame (){
                 [0,0,0],
                 [0,0,0],
               ];
-  this.hebrewNumbers = ['images/1.png','images/2.png','images/3.png' ];
+  this.hebrewNumbers = ['images/1.png','images/2.png','images/3.png','images/4.png','images/5.png','images/6.png','images/7.png','images/8.png','images/9.png','images/10.png' ];
   this.randomCardsGrid = '';
-  this.round = 2;
+  this.round = 7;
   this.currentNumber = 1;
   this.currentCard = '';
   this.spotOn = '';
@@ -30,6 +30,7 @@ $(document).ready(function(){
       this.showCurrentCard();
       this.round+=1;
       this.currentNumber+=1;
+      $('#counter').html(this.round);
       };
 
     OmerGame.prototype.nextRound = function (){
