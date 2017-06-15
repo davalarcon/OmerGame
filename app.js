@@ -11,11 +11,11 @@ $(document).ready(function(){
 
   $('.gridImg').click(function(){
     ion.sound.play('button_tiny');
-    if(($(this).attr('src') ===  $(".currentCard").attr('src') ) && myGame.currentNumber <= 3){
+    if(($(this).attr('src') ===  $(".currentCard").attr('src') ) && myGame.currentNumber <= 9){
     myGame.nextRound();
 
     }
-    else if (myGame.currentNumber === 4) {
+    else if (myGame.currentNumber === 10) {
       ion.sound.play('flamenco2');
       alert('You Won!');
       window.location = "index.html";
