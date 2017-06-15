@@ -1,5 +1,5 @@
 body{
-  background-color: gold;
+  background-color: MEDIUMSLATEBLUE;
 }
 .btn-success{
   height: 200px;
@@ -9,4 +9,10 @@ body{
   border: solid 15px black;
   background-color: white;
   border-radius: 40px;
+}
+h1{
+  font-size: 100px;
+}
+.instructions{
+  font-size: 30px;
 }
