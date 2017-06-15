@@ -9,23 +9,20 @@ function OmerGame (){
 
 $(document).ready(function(){
 
-//______ sounds_________
-    $('.start-game').click(function(){
-      ion.sound.play('branch_break');
-    });
 
-//_______________________
 
     OmerGame.prototype.startGame = function (){
       this.showCurrentCard();
       this.addRandomCards();
+      this.currentNumber = 1;
+      ion.sound.play('adventurers');
+      // this.currentCard = 'image/1.png';
 
       $('#counter').html(this.currentNumber);
     };
 
 
     OmerGame.prototype.nextRound = function (){
-      console.log("are we here yet");
       this.currentNumber +=1;
       this.showCurrentCard();
       this.addRandomCards();
@@ -55,7 +52,6 @@ $(document).ready(function(){
 
       $('#number'+i).attr('src', gridNumbers[i]);
     }
-
     });
 
     OmerGame.prototype.showCurrentCard = (function(){
@@ -65,32 +61,57 @@ $(document).ready(function(){
 
     OmerGame.prototype.gameOver = function () {
       alert("Game over!! Try again!!");
+
       this.currentNumber = 1;
       this.startGame();
+    };
+    OmerGame.prototype.youWin = function (){
+      // alert("Great game! You Win!");
+      this.currentNumber = 1;
+      this.startGame();
+    };
 
-  };
+    //______ sounds_________
+        $('.start-game').click(function(){
+          ion.sound.play('branch_break');
+          myGame.youWin();
+          alert('start');
+        });
+
+    //_______________________
 
 
 });
-
-
-
-
 
 ion.sound({
     sounds: [
         {name: "glass"},
         {name: "bell_ring"},
         {name: "branch_break"},
-        {name: "button_click"}
+        {name: "button_click"},
+        {name: "fantasy1"},
+        {name: "metal_plate_2"},
+        {name: "button_tiny"},
+        {name: "flamenco2"},
     ],
 
     // main config
     path: "ion.sound-3.0.7/sounds/",
     preload: true,
-    multiplay: true,
-    volume: 0.9
+    multiplay: false,
+    volume: 0.99
 });
 
-// play sound
-ion.sound.play("beer_can_opening");
+ion.sound({
+    sounds: [
+
+        {name: "adventurers"},
+
+    ],
+
+    // main config
+    path: "ion.sound-3.0.7/sounds/",
+    preload: true,
+    multiplay: false,
+    volume: 0.2
+});

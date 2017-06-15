@@ -10,24 +10,23 @@ myGame.startGame();
 $(document).ready(function(){
 
   $('.gridImg').click(function(){
-    console.log("My game current number:" + myGame.currentNumber);
-    if(($(this).attr('src') ===  $(".currentCard").attr('src') ) && myGame.currentNumber <= 3){
-      console.log("Inside the function");
+    ion.sound.play('button_tiny');
+    if(($(this).attr('src') ===  $(".currentCard").attr('src') ) && myGame.currentNumber <= 10){
     myGame.nextRound();
 
     }
-    // else if (myGame.currentNumber === 4) {
-    //   alert('You Won!');
-    // }
+    else if (myGame.currentNumber === 11) {
+      ion.sound.play('flamenco2');
+      alert('You Won!');
+      myGame.youWin();
+    }
     else {
+      ion.sound.play('metal_plate_2');
       myGame.gameOver();
+      // alert('Game Over. Try again!');
     }
   });
 
 
 
 });
-
-
-// else if ($(this).attr('src') === $(".currentCard").attr('images/3.png')) {
-//   alert('You Won!');
