@@ -2,24 +2,24 @@ var myGame = new OmerGame();
 $(document).ready(function(){
 myGame.startGame();
 
-$('button').click(function(){
-  myGame.startGame();
-  });
+// $('button').click(function(){
+//   myGame.startGame();
+//   });
 });
 
 $(document).ready(function(){
 
   $('.gridImg').click(function(){
-
-    if($(this).attr('src') ===  $(".currentCard").attr('src')){
-    // alert('Great!');
+    console.log("My game current number:" + myGame.currentNumber);
+    if(($(this).attr('src') ===  $(".currentCard").attr('src') ) && myGame.currentNumber <= 3){
+      console.log("Inside the function");
     myGame.nextRound();
+
     }
-    else if ($(this).attr('src') === ('images/3.png')) {
-      alert('You Won!');
-    }
+    // else if (myGame.currentNumber === 4) {
+    //   alert('You Won!');
+    // }
     else {
-      // alert('Game Over');
       myGame.gameOver();
     }
   });
@@ -27,3 +27,7 @@ $(document).ready(function(){
 
 
 });
+
+
+// else if ($(this).attr('src') === $(".currentCard").attr('images/3.png')) {
+//   alert('You Won!');

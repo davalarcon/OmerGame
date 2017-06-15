@@ -40,6 +40,7 @@ h2{
 }
 
 .top{
+  margin-top: 30px;
   height: 150px;
   /*border: solid black;*/
   padding-left: 125px;
@@ -96,4 +97,4 @@ section {
 }
 .number{
   height: 50px;
-}*/
+}
