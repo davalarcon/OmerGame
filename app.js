@@ -11,9 +11,9 @@ $(document).ready(function(){
 
   $('.gridImg').click(function(){
     ion.sound.play('button_tiny');
+
     if(($(this).attr('src') ===  $(".currentCard").attr('src') ) && myGame.currentNumber <= 9){
     myGame.nextRound();
-
     }
     else if (myGame.currentNumber === 10) {
       ion.sound.play('flamenco2');
@@ -21,6 +21,9 @@ $(document).ready(function(){
       window.location = "index.html";
       // myGame.youWin();
     }
+    // else if (myGame.timer === 0) {
+    //   myGame.gameOver();
+    // }
     else {
       ion.sound.play('metal_plate_2');
       myGame.gameOver();
