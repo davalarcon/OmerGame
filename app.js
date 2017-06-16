@@ -26,8 +26,8 @@ $(document).ready(function(){
     }
     else {
       ion.sound.play('metal_plate_2');
-      alert('Game Over. Please try again!');
-      window.location = "index.html";
+      showModalLose();
+      this.clock(clearInterval(timeUp));
       // myGame.gameOver();
 
     }
