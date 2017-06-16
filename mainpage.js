@@ -18,7 +18,7 @@ $(document).ready(function(){
       multiplay: false,
       volume: 0.4
   });
-ion.sound.play('flowerfairyfly');
+ion.sound.play('adventurers');
 
 
 });
