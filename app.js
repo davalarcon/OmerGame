@@ -16,8 +16,7 @@ $(document).ready(function(){
     myGame.nextRound();
     }
     else if (myGame.currentNumber === 6) {
-      console.log('sound?');
-      ion.sound.play('flamenco2.mp3');
+      ion.sound.play('victory');
       alert('You Won!');
       window.location = "index.html";
       // myGame.youWin();
