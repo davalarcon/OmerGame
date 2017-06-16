@@ -93,9 +93,9 @@ $(document).ready(function(){
           ion.sound.play('branch_break');
           this.clock(clearInterval(timeUp));
         });
-        $('.turn-off-cards').click(function(){
-          ion.sound.play('branch_break');
-          this.clock(clearInterval(timeUp));
+        $('.turn-off-cards').on('click', function(){
+          // ion.sound.play('branch_break');
+          $('.currentCard').fadeToggle(200);
         });
 
     //_______________________
