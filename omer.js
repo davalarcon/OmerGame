@@ -32,7 +32,8 @@ $(document).ready(function(){
           // myGame.time = 0;
           $('h2').html("0");
           clearInterval(timeUp);
-          myGame.gameOver();
+          alert('time is up!');
+          window.location = "index.html";
         }
       }
     };
@@ -98,10 +99,12 @@ $(document).ready(function(){
           $('.currentCard').fadeToggle(200);
         });
 
-    //_______________________
+//_______________________
 
 
 });
+
+// --------------------SOUNDS------------------
 
 ion.sound({
     sounds: [
@@ -135,3 +138,27 @@ ion.sound({
     multiplay: false,
     volume: 0.2
 });
+
+
+// -------------- MODAL ----------------
+
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+ function showModal() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    window.location = "index.html";
+};
+
+// When the user clicks anywhere outside of the modal, close it

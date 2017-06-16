@@ -17,8 +17,11 @@ $(document).ready(function(){
     }
     else if (myGame.currentNumber === 6) {
       ion.sound.play('victory');
-      alert('You Won!');
-      window.location = "index.html";
+      showModal();
+      this.clock(clearInterval(timeUp));
+
+      // alert('You Won!');
+      // window.location = "index.html";
       // myGame.youWin();
     }
     else {
