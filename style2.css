@@ -16,3 +16,14 @@ h1{
 .instructions{
   font-size: 30px;
 }
+
+.image{
+  height: 500px;
+  padding-left: 60px;
+  margin-bottom: 50px;
+}
+
+.footer{
+  height: 100px;
+  background-color: black;
+}

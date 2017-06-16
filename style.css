@@ -9,13 +9,23 @@ body{
 strong{
   font-size: 100px;
   text-align: center;
-  padding-left: 60px;
+  padding-left: 70px;
 }
 h2{
   padding-top: 0px;
   font-size: 100px;
   margin-top: 0;
-  padding-left: 85px;
+  padding-left: 90px;
+}
+h3{
+  position: absolute;
+  font-size: 32px;
+  padding-left: 10px;
+  margin-top: 34px;
+}
+.roundNumber{
+  font-size: 22px;
+  padding-left: 0px;
 }
 #hebrewTitle{
   float: right;
@@ -27,9 +37,10 @@ h2{
   /*border: solid black;*/
 }
 .container-fluid .time{
-  height: 130px;
+  height: 115px;
   margin-top: 5px;
-  border: solid 7px black;
+  /*border: solid 7px black;*/
+  border-bottom: solid black;
   border-radius: 10px 10px 10px 10px;
   padding: 0px;
 }
@@ -163,9 +174,20 @@ section {
     font-size: 100px;
     font-weight: bold;
 }
-
 .close:hover,
 .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.closeLose{
+  color: BLACK;
+  float: right;
+  font-size: 100px;
+  font-weight: bold;
+}
+.closeLose:hover,
+.closeLose:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;

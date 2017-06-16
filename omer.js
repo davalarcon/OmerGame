@@ -95,7 +95,7 @@ $(document).ready(function(){
           this.clock(clearInterval(timeUp));
         });
         $('.turn-off-cards').on('click', function(){
-          // ion.sound.play('branch_break');
+          ion.sound.play('branch_break');
           $('.currentCard').fadeToggle(200);
         });
 
@@ -151,6 +151,7 @@ var btn = document.getElementById("myBtn");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
+var spanLose = document.getElementsByClassName("closeLose")[0];
 
 // When the user clicks on the button, open the modal
  function showModal() {
@@ -162,6 +163,9 @@ function showModalLose() {
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
+    window.location = "index.html";
+};
+spanLose.onclick = function() {
     window.location = "index.html";
 };
 
