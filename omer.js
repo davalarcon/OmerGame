@@ -4,28 +4,10 @@ function OmerGame (){
   'images/24.png','images/25.png','images/26.png','images/27.png','images/28.png','images/29.png','images/30.png','images/31.png','images/32.png','images/33.png','images/34.png','images/35.png','images/36.png','images/37.png','images/38.png','images/39.png','images/40.png', 'images/41.png','images/42.png','images/43.png','images/44.png','images/45.png','images/46.png','images/47.png','images/48.png','images/49.png','images/50.png' ];
   this.currentNumber = 1;
   this.currentCard = '';
-  this.timer = '';
+  // this.time = 1;
   }
 
 $(document).ready(function(){
-
-    OmerGame.prototype.clock = function (){
-
-      timeUp = setInterval(timer, 1000);
-      var count = 5;
-
-      function timer(){
-        count = count -1;
-        $('h2').html(count);
-
-        if (count===0){
-          $('h2').html("0");
-          clearInterval (timeUp);
-          this.timer = 0;
-        }
-      }
-
-    };
 
     OmerGame.prototype.startGame = function (){
       this.showCurrentCard();
@@ -36,8 +18,23 @@ $(document).ready(function(){
       // this.currentCard = 'image/1.png';
 
       $('#counter').html(this.currentNumber);
+    };
 
+    OmerGame.prototype.clock = function (){
 
+      timeUp = setInterval(timer, 1000);
+      var count = 60;
+      function timer(){
+        count = count -1;
+        $('h2').html(count);
+
+        if (count===-1){
+          // myGame.time = 0;
+          $('h2').html("0");
+          clearInterval(timeUp);
+          myGame.gameOver();
+        }
+      }
     };
 
 
@@ -80,21 +77,25 @@ $(document).ready(function(){
 
     OmerGame.prototype.gameOver = function () {
       alert("Game over!! Try again!!");
-
+      this.clock(clearInterval(timeUp));
       this.currentNumber = 1;
       this.startGame();
     };
     OmerGame.prototype.youWin = function (){
       // alert("Great game! You Win!");
       this.currentNumber = 1;
+      this.clock(clearInterval(timeUp));
       this.startGame();
     };
 
-    //______ sounds_________
-        $('.start-game').click(function(){
+//buttons------------------
+        $('.stop-clock').click(function(){
           ion.sound.play('branch_break');
-          myGame.youWin();
-          // alert('start');
+          this.clock(clearInterval(timeUp));
+        });
+        $('.turn-off-cards').click(function(){
+          ion.sound.play('branch_break');
+          this.clock(clearInterval(timeUp));
         });
 
     //_______________________

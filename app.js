@@ -12,22 +12,21 @@ $(document).ready(function(){
   $('.gridImg').click(function(){
     ion.sound.play('button_tiny');
 
-    if(($(this).attr('src') ===  $(".currentCard").attr('src') ) && myGame.currentNumber <= 9){
+    if(($(this).attr('src') ===  $(".currentCard").attr('src') ) && myGame.currentNumber <= 5){
     myGame.nextRound();
     }
-    else if (myGame.currentNumber === 10) {
+    else if (myGame.currentNumber === 6) {
       ion.sound.play('flamenco2');
       alert('You Won!');
       window.location = "index.html";
       // myGame.youWin();
     }
-    // else if (myGame.timer === 0) {
-    //   myGame.gameOver();
-    // }
     else {
       ion.sound.play('metal_plate_2');
-      myGame.gameOver();
-      // alert('Game Over. Try again!');
+      alert('Game Over. Please try again!');
+      window.location = "index.html";
+      // myGame.gameOver();
+
     }
   });
 
