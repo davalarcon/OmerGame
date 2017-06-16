@@ -9,7 +9,7 @@ $(document).ready(function(){
   ion.sound({
       sounds: [
           {name: "adventurers"},
-          {name: "flowerfairyfly"}
+          {name: "flowerfairy"}
       ],
 
       // main config
@@ -18,7 +18,7 @@ $(document).ready(function(){
       multiplay: false,
       volume: 0.4
   });
-ion.sound.play('flowerfairyfly');
+ion.sound.play('flowerfairy');
 
 
 });
