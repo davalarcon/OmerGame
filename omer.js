@@ -112,7 +112,7 @@ ion.sound({
         {name: "fantasy1"},
         {name: "metal_plate_2"},
         {name: "button_tiny"},
-        {name: "flamenco2"},
+        {name: "flamenco2.mp3"},
     ],
 
     // main config
