@@ -41,10 +41,11 @@ h1{
 @media screen and (max-width:768px){
   body{
     /*background-color: red;*/
-    width: 1024px;
+    width: 667px;
   }
   .image{
-    margin-left: -32px;
+    margin-left: -60px;
+    height: 400px;
   }
   .btn-success{
     height: 200px;
@@ -64,5 +65,8 @@ h1{
   }
   .instructions{
     margin-left: 40px;
+  }
+  .footer{
+    height: 1px;
   }
 }
