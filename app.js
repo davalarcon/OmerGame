@@ -12,10 +12,10 @@ $(document).ready(function(){
   $('.gridImg').click(function(){
     ion.sound.play('button_tiny');
 
-    if(($(this).attr('src') ===  $(".currentCard").attr('src') ) && myGame.currentNumber <= 5){
+    if(($(this).attr('src') ===  $(".currentCard").attr('src') ) && myGame.currentNumber <= 49){
     myGame.nextRound();
     }
-    else if (myGame.currentNumber === 6) {
+    else if (myGame.currentNumber === 50) {
       ion.sound.play('victory');
       showModal();
       this.clock(clearInterval(timeUp));
