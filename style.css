@@ -196,4 +196,119 @@ section {
 @media screen and (max-width:768px){
   body{
 
+    }
+    .top{
+      height: 10px;
+      /*border: solid black;*/
+      padding-left: 125px;
+    }
+  .backgroundImage{
+        position: absolute;
+        width: 667px;
   }
+  h2{
+    padding-top: 0px;
+    font-size: 50px;
+    margin-top: 0;
+    padding-left: 90px;
+  }
+  h3{
+    position: absolute;
+    font-size: 25px;
+    padding-left: 10px;
+    margin-top: 15px;
+  }
+  .container-fluid .time{
+    height: 60px;
+    width: 136px;
+    float: left;
+    margin-top: 5px;
+    /*border: solid 7px black;*/
+    border-bottom: solid black;
+    border-radius: 10px 10px 10px 10px;
+    padding: 0px;
+  }
+  .container-fluid .card{
+    margin-top: 10px;
+    height: 150px;
+    border: solid black;
+    float: left;
+  }
+  .container-fluid .number{
+    height: 122px;
+    margin: -19px;
+    float: left;
+    /*border: solid black;*/
+  }
+  .container-fluid .info{
+    height: 200px;
+    /*border: solid black;*/
+    height: 247px;
+  }
+  .roundNumber{
+    font-size: 25px;
+    padding-left: 35px;
+    padding-top: 25px;
+  }
+  strong{
+    padding-left: 115px;
+    font-size: 70px;
+
+  }
+  .container{
+    height: 530px;
+    /*border: solid black;*/
+  }
+  .col-sm-4{
+    padding-top: 50px;
+    height: 400px;
+    border: solid black;
+  }
+  .logo{
+    border-radius: 0px 10px 10px 0px;
+    border: solid 7px black;
+    float: left;
+  }
+  .col-sm-3{
+    width: 100%;
+    background-color: MEDIUMSLATEBLUE;
+    height: 80px;
+    border: solid 7px black;
+    border-radius: 10px 0px 0px 10px;
+    padding-left: 14px;
+  }
+  .col-sm-5{
+    position: relative;
+    width: 360px;
+    height: 288px;
+    border: solid black;
+    float: left;
+  }
+  .grid{
+    /*border: 2px solid #000;*/
+    height: 90px;
+    padding-top: 10px;
+    background-color: white;
+  }
+  .colGrid{
+    width: 120px;
+    float: left
+  }
+  .gridImg{
+    height: 60px;
+    width: 60px;
+  }
+  .row{
+    margin-right: 3px;
+  }
+  .currentCard{
+    margin-top: 10px;
+    margin-left: 40px;
+    float: left;
+    height: 50px;
+    width: 50px;
+  }
+  .number{
+    height: 50px;
+  }
+}
