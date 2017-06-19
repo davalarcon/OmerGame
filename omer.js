@@ -32,8 +32,7 @@ $(document).ready(function(){
           // myGame.time = 0;
           $('h2').html("0");
           clearInterval(timeUp);
-          alert('time is up!');
-          window.location = "index.html";
+          showModalLose();
         }
       }
     };

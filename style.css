@@ -241,6 +241,7 @@ section {
     height: 122px;
     margin: -19px;
     float: left;
+    margin-left: 34px;
     /*border: solid black;*/
   }
   .container-fluid .info{
@@ -268,9 +269,10 @@ section {
     border: solid black;
   }
   .logo{
-    /*border-radius: 0px 10px 10px 0px;*/
+    border-radius: 10px 10px 10px 10px;
     /*border: solid 7px black;*/
     float: left;
+    margin-left: 50px;
   }
   .logoImg{
     height: 100px;
@@ -315,7 +317,7 @@ section {
   .currentCard{
     margin-top: 10px;
     margin-left: 40px;
-    float: left;
+    float: right;
     height: 50px;
     width: 50px;
   }
